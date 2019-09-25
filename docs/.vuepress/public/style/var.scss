@@ -1,0 +1,74 @@
+// 基础间距
+
+$space: 10px;
+$size: 100px;
+
+// 基础颜色系变量
+
+// 基础辅助色
+$primary: #005bea;
+$success: #0dbb38;
+$warning: #fb7d37;
+$danger: #f22323;
+$info: #17243466;
+
+// 基础中性色
+$color-title: #0d142b;
+$color-content: #3e5365;
+$color-disabled: #eff3f6;
+$color-border: #dcdfe6;
+$color-bg: #eff0f6;
+
+// 拓展颜色系变量
+
+// 深背景色
+$color-bg-dark: #131528;
+
+// 白色
+$white: #ffffff;
+
+// 导航栏颜色
+$nav-font-color: #aeb6be;
+$nav-font-color-hover: $white;
+$nav-bg-color: #23284b;
+
+// 表格
+$table-gray: rgba(70, 70, 70, 0.6);
+
+// 图表颜色
+$blue: #348eff;
+$green: $success;
+$yellow: $warning;
+$red: $danger;
+$blue-dark: #554bfc;
+$origin: #fd5d01;
+$purple: #a21eff;
+$blue-light: #15bde8;
+$purple-light: #df43ea;
+$pink: #ff3a95;
+
+// 渐变色设置
+$linear-gradient-nav: linear-gradient(0deg, rgba(24, 104, 235, 0.36) 0%, rgba(24, 104, 235, 0.04) 100%);
+$linear-gradient-btn: linear-gradient(320deg, #005bea 0%, #00c6fb 100%);
+
+// 大小设置
+
+/// padding||Spacing|3
+$--button-padding-vertical: 12px !default;
+/// padding||Spacing|3
+$--button-padding-horizontal: 20px !default;
+
+/// padding||Spacing|3
+$--button-medium-padding-vertical: 8px !default;
+/// padding||Spacing|3
+$--button-medium-padding-horizontal: 36px !default;
+
+/// padding||Spacing|3
+$--button-small-padding-vertical: 9px !default;
+/// padding||Spacing|3
+$--button-small-padding-horizontal: 15px !default;
+
+/// padding||Spacing|3
+$--button-mini-padding-vertical: 5px !default;
+/// padding||Spacing|3
+$--button-mini-padding-horizontal: 5px !default;

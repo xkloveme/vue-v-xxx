@@ -1,0 +1,64 @@
+.page {
+  margin: 0 auto;
+  padding: 0 40px;
+  overflow: hidden;
+}
+
+a:hover,
+input:hover,
+a:active.input:active {
+  cursor: url('https://allinone-ufile.hekr.me/xiaofang-web/a036af58a6694eeb83ecb71aa41dfc74/cool.cur'), pointer;
+}
+
+.theme-default-content:not(.custom) {
+  max-width: 100% !important;
+}
+.page-edit,
+.page-nav {
+  max-width: 100% !important;
+}
+.hk-ui {
+  margin: 10px 0;
+}
+/* 光标 */
+@keyframes caret {
+  50% {
+    border-right-color: transparent;
+  }
+}
+
+.code {
+  font: bold 100% Consolas, Monaco, monospace;
+  min-width: 15ch;
+  min-height: 50px;
+  white-space: pre-wrap;
+  word-break: break-all;
+  word-wrap: break-word;
+  background: #000;
+  color: rgb(26, 230, 26);
+  padding: 5px;
+  margin: 10px 0;
+  border-right: 7px solid;
+  animation: caret 1s steps(1) infinite;
+}
+
+pre.language-bash,
+pre.language-html,
+pre.language-js,
+pre.language-pug,
+pre.language-scss,
+pre.language-css {
+  max-height: 400px;
+}
+
+.el-date-table,
+.el-year-table,
+.el-month-table {
+  display: table;
+  tr, th, td {
+    border: none;
+  }
+  tr:nth-child(2n) {
+    background-color: #ffffff;
+  }
+}
