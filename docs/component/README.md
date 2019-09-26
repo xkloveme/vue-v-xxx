@@ -1,7 +1,15 @@
+<!--
+ * @describe: 描述
+ * @Author: superDragon
+ * @Date: 2019-09-25 10:30:34
+ * @LastEditors: superDragon
+ * @LastEditTime: 2019-09-25 10:30:34
+ -->
 
 这是组件
 
 ---
-欢迎查看hk-ui文档
+
+欢迎查看 hk-ui 文档
 
 ---

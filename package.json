@@ -8,13 +8,10 @@
     "build": "npm run docs:build",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
+    "lib": "vue-cli-service build --target lib --name vue-v-xxx --dest lib src/main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "vue",
-    "Custom",
-    "Directives"
-  ],
+  "keywords": ["vue", "Custom", "Directives"],
   "author": "xkloveme",
   "license": "ISC",
   "dependencies": {
@@ -35,11 +32,12 @@
     "babel-eslint": "^10.0.2",
     "babel-plugin-dynamic-import-node": "^2.3.0",
     "cross-env": "^5.2.0",
-    "vuepress": "^1.1.0",
     "eslint": "^6.0.1",
     "eslint-plugin-vue": "^5.2.3",
     "markdown-it-checkbox": "^1.1.0",
     "markdown-it-kbd": "^2.0.0",
-    "vue-template-compiler": "^2.6.10"
+    "vue-template-compiler": "^2.6.10",
+    "vuepress": "^1.1.0",
+    "vuepress-theme-api": "^0.2.3"
   }
 }
