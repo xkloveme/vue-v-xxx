@@ -3,10 +3,10 @@
  * @Author: superDragon
  * @Date: 2019-09-22 19:52:10
  * @LastEditors: superDragon
- * @LastEditTime: 2019-09-22 20:22:36
+ * @LastEditTime: 2019-09-28 19:19:54
  */
-import { Message } from 'element-ui'
-
+import packages from '../../packages'
+let Message = packages.Message
 const vCopy = {
   /*
     bind 钩子函数，第一次绑定时调用，可以在这里做初始化设置
@@ -34,7 +34,7 @@ const vCopy = {
       // textarea.setSelectionRange(0, textarea.value.length);
       const result = document.execCommand('Copy')
       if (result) {
-        Message.success('复制成功')
+        Message('复制成功')
       }
       document.body.removeChild(textarea)
     }
