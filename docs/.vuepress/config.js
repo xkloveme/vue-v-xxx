@@ -3,12 +3,12 @@
  * @Author: superDragon
  * @Date: 2019-09-25 10:30:34
  * @LastEditors: superDragon
- * @LastEditTime: 2019-09-26 10:20:24
+ * @LastEditTime: 2019-09-28 19:56:58
  */
 const baseMap = {
   dev: '/',
-  test: '/v-xxx/',
-  prod: '/v-xxx/'
+  test: '/vue-v-xxx/',
+  prod: '/vue-v-xxx/'
 }
 let component = [
   'hk-button'
