@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "npm run docs:dev",
     "build": "npm run docs:build",
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs",
+    "docs:dev": "cross-env ENV=prod vuepress dev docs",
+    "docs:build": "cross-env ENV=prod vuepress build docs",
     "lib": "vue-cli-service build --target lib --name vue-v-xxx --dest lib src/main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
