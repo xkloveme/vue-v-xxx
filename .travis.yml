@@ -1,0 +1,36 @@
+language: node_js
+node_js:
+  - '8'
+
+install:
+  - npm install
+
+script:
+  - npm run build
+
+after_success:
+  - cd ./docs/.vuepress/dist
+  - git init
+  - git config --global user.name "${U_NAME}"
+  - git config --global user.email "${U_EMAIL}"
+  - git add .
+  - git commit -m "👷‍Automatically update from travis-ci 👷‍"
+  - git push --quiet --force  "https://${GH_TOKEN}@${GH_REF}" master:${P_BRANCH}
+
+branches:
+  only:
+    - master
+
+notifications:
+  email:
+    - 18538715282@163.com
+  on_failure: always
+
+# Note: you should set Environment Variables here or 'Settings' on travis-ci.org
+env:
+  global:
+    # 我将其添加到了travis-ci的环境变量中
+    - U_NAME: xkloveme
+    - U_EMAIL: 18538715282@qq.com
+    - P_BRANCH: gh-pages
+    - GH_REF: github.com/xkloveme/vue-v-xxx.git
