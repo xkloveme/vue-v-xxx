@@ -21,7 +21,7 @@ const install = function (Vue, opts = {}) {
     Vue.directive(key, directives[key])
   })
 
-  Vue.prototype.$message1 = packages.Message
+  Vue.prototype.$message = packages.Message
 }
 /* istanbul ignore if */
 if (typeof window !== 'undefined' && window.Vue) {

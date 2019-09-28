@@ -13,6 +13,32 @@ features:
     footer: MIT Licensed | Copyright © 2019-present
 ---
 
+## 安装
+
+```bash
+# install vue-v-xxx
+ npm install vue-v-xxx --save
+# OR yarn global add vue-v-xxx --save
+```
+
+## 使用
+
+```js
+import Vue from 'vue'
+import Vxxx from 'vue-v-xxx'
+import App from './App'
+Vue.config.productionTip = false
+
+Vue.use(Vxxx)
+
+/* eslint-disable no-new */
+new Vue({
+  el: '#app',
+  components: { App },
+  template: '<App/>'
+})
+```
+
 <Section>
 
 ## 为 便捷 vue 开发 而生

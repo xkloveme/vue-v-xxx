@@ -9,6 +9,7 @@
     "docs:dev": "cross-env ENV=prod vuepress dev docs",
     "docs:build": "cross-env ENV=prod vuepress build docs",
     "lib": "vue-cli-service build --target lib --name vue-v-xxx --dest lib src/main.js",
+    "public": "nrm use npm && npm run lib && relix --patch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": ["vue", "Custom", "Directives"],
