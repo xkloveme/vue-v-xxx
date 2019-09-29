@@ -3,7 +3,7 @@
  * @Author: superDragon
  * @Date: 2019-09-25 10:30:34
  * @LastEditors: superDragon
- * @LastEditTime: 2019-09-28 20:11:52
+ * @LastEditTime: 2019-09-29 10:59:03
  */
 const baseMap = {
   dev: '/',
@@ -62,6 +62,39 @@ module.exports = {
     // 使用更多的 markdown-it 插件!
     md.use(require('markdown-it-checkbox')).use(require('markdown-it-kbd'))
   },
-  plugins: ['@vuepress/back-to-top', '@vuepress/medium-zoom', 'demo-block'],
+  plugins: [
+    [
+      'vuepress-plugin-container',
+      {
+        type: 'tips',
+        before: info => `<div class="tips"><p class="title">${info}</p>`,
+        after: '</div>',
+      },
+    ],
+    [
+      'vuepress-plugin-container',
+      {
+        type: 'info',
+        before: info => `<div class="tips info"><p class="title">${info}</p>`,
+        after: '</div>',
+      },
+    ],
+    [
+      'vuepress-plugin-container',
+      {
+        type: 'success',
+        before: info => `<div class="tips success"><p class="title">${info}</p>`,
+        after: '</div>',
+      },
+    ],
+    [
+      'vuepress-plugin-container',
+      {
+        type: 'error',
+        before: info => `<div class="tips error"><p class="title">${info}</p>`,
+        after: '</div>',
+      },
+    ],
+    '@vuepress/back-to-top', '@vuepress/medium-zoom', 'demo-block'],
   serviceWorker: true
 }

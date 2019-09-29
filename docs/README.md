@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /images/vue.png
+heroImage: /images/logo.png
 actionText: 快速上手 →
 actionLink: /getting-started
 features:
@@ -18,15 +18,17 @@ features:
 ```bash
 # install vue-v-xxx
  npm install vue-v-xxx --save
-# OR yarn global add vue-v-xxx --save
+# or
+ yarn add vue-v-xxx --save
 ```
 
 ## 使用
 
 ```js
 import Vue from 'vue'
-import Vxxx from 'vue-v-xxx'
 import App from './App'
+import Vxxx from 'vue-v-xxx'
+import 'vue-v-xxx/lib/vue-v-xxx.css'
 Vue.config.productionTip = false
 
 Vue.use(Vxxx)
