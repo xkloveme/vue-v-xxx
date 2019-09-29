@@ -1,8 +1,8 @@
 {
   "name": "vue-v-xxx",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "vue v-xxx extend custom directives",
-  "main": "index.js",
+  "main": "lib/vue-v-xxx.common.js",
   "scripts": {
     "dev": "npm run docs:dev",
     "build": "npm run docs:build",
