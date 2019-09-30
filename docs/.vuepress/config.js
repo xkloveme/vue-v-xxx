@@ -3,21 +3,18 @@
  * @Author: superDragon
  * @Date: 2019-09-25 10:30:34
  * @LastEditors: superDragon
- * @LastEditTime: 2019-09-29 10:59:03
+ * @LastEditTime: 2019-09-29 22:19:07
  */
 const baseMap = {
   dev: '/',
   test: '/vue-v-xxx/',
   prod: '/vue-v-xxx/'
 }
-let component = [
-  'hk-button'
-]
 let started = [
   'v-copy'
 ]
 module.exports = {
-  base: baseMap[process.env.ENV],
+  base: '/vue-v-xxx/',
   theme: 'vuepress-theme-api',
   title: 'vue-v-xxx',
   description: '一个基于vue的v-xxx扩展库',

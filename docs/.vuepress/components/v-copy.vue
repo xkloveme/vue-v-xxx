@@ -1,21 +1,15 @@
-<!--
- * @describe: v-copy
- * @Author: superDragon
- * @Date: 2019-09-25 10:30:34
- * @LastEditors: superDragon
- * @LastEditTime: 2019-09-28 19:21:08
- -->
 <template lang="pug">
 .v-xxx
-  input(:value="value")
   Button(@click="handleClick" v-copy="value") 点击复制
+  div
+    textarea(placeholder="Paste here" style="margin-top:40px;width:100%;height:100%;")
 </template>
 <script>
 export default {
-  name: 'hk-ui-editor',
+  name: 'v-copy',
   data () {
     return {
-      value: '这是个默认值'
+      value: ''
     }
   },
   methods: {

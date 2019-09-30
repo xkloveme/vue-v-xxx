@@ -7,12 +7,9 @@ title: v-copy
  * @Author: superDragon
  * @Date: 2019-09-25 12:00:17
  * @LastEditors: superDragon
- * @LastEditTime: 2019-09-26 10:45:34
+ * @LastEditTime: 2019-09-29 23:07:02
  -->
- </br>
- </br>
- </br>
- </br>
+ <div style="width:100%;height:100px;"></div>
 <Block>
 <h1>使用基本说明</h1>
 
@@ -30,9 +27,31 @@ title: v-copy
 </br>
 
 <Example>
+``` vue
+<template lang="pug">
+.v-xxx
+  Button(@click="handleClick" v-copy="value") 点击复制
+  div
+    textarea(placeholder="Paste here" style="margin-top:40px;width:100%;height:100%;")
+</template>
+<script>
+export default {
+  name: 'v-copy',
+  data () {
+    return {
+      value: ''
+    }
+  },
+  methods: {
+    handleClick (html = '你复制了我,去粘贴吧') {
+      this.value = html
+    }
+  }
+}
+</script>
 
-示例...
-
+```
 </Example>
 
 </Block>
+```
