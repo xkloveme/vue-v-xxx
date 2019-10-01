@@ -3,8 +3,10 @@ title: v-debounce
 ---
 
 <div style="width:100%;height:100px;"></div>
-<Block>
-<h1>使用基本说明</h1>
+<Block >
+
+<h1 v-copy="v-debounce" title="点击复制指令">v-debounce</h1>
+<h2>使用基本说明</h2>
 
 </Block>
  </br>

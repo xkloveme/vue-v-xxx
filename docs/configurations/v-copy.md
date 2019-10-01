@@ -53,13 +53,13 @@ title: v-copy
 
 <div>
 
-## API
+### 说明
 
 ::: info
 `v-copy` 支持传入字符串和变量
 :::
 
-### Parameters
+## API
 
 | Name  |  Type  | Description |      Required      |
 | :---: | :----: | :---------: | :----------------: |

@@ -1,17 +1,19 @@
 <template lang="pug">
 .v-xxx
-  h3 立即触发:{{num}}
-  input(v-model="num")
-  h3 节流后:{{num2}}
-  input(v-model="num2" v-throttle)
+  h2 点击次数:{{num}}
+  Button(v-debounce @click="addNum") 点我
 </template>
 <script>
 export default {
   name: 'v-debounce',
   data () {
     return {
-      num: '',
-      num2: ''
+      num: 0
+    }
+  },
+  methods: {
+    addNum () {
+      this.num++
     }
   }
 }

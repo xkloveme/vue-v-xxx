@@ -34,3 +34,19 @@ export default {
 </Example>
 
 </Block>
+
+<div>
+
+### 说明
+
+::: info
+`v-focus` 在移动端登录时异常好用
+:::
+
+## API
+
+| Name | Type | Description | Required |
+| :--: | :--: | :---------: | :------: |
+
+
+</div>
