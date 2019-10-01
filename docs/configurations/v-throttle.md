@@ -1,21 +1,19 @@
 ---
-title: v-focus
+title: v-throttle
 ---
 
 <div style="width:100%;height:100px;"></div>
-<Block >
-
-<h1 v-copy="v-focus" title="点击复制指令">v-focus</h1>
-<h2>使用基本说明</h2>
+<Block>
+<h1>使用基本说明</h1>
 
 </Block>
  </br>
 
 <Block>
 
-## 聚焦指令
+## 节流指令
 
-<v-focus/>
+<v-throttle/>
 </br>
 <Example>
 
