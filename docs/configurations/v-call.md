@@ -13,7 +13,7 @@ title: v-call
 
 <Block>
 
-## 固定指令
+## 拨打指令
 
 <v-call/>
 </br>
@@ -22,12 +22,17 @@ title: v-call
 ```html
 <template lang="pug">
 .v-xxx
-  div(v-pin="200") 顶部200px
-  div(v-pin:left="300") 左边300px
+  div(v-call="tel") 点击拨打☎️
+  div(v-call:sms="10086") 点击发短信💬
 </template>
 <script>
   export default {
-    name: 'v-pin'
+    name: 'v-call',
+    data() {
+      return {
+        tel: '10086'
+      }
+    }
   }
 </script>
 ```
@@ -41,14 +46,14 @@ title: v-call
 ### 说明
 
 ::: info
-`v-pin` 支持传入定位位置和定位值`v-pin:left || top` 默认 left
+`v-call` 支持电话和短信`v-call:sms || tel` 默认 tel
 :::
 
 ## API
 
 | Name  |       Type       | Description |      Required      |
 | :---: | :--------------: | :---------: | :----------------: |
-|  arg  |      String      | `left||top` | :heavy_minus_sign: |
-| value | `String||number` |      0      | :heavy_minus_sign: |
+|  arg  |      String      | `sms||tel`  | :heavy_minus_sign: |
+| value | `String||number` |      0      | :heavy_check_mark: |
 
 </div>
