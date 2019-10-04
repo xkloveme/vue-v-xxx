@@ -3,7 +3,7 @@
  * @Author: superDragon
  * @Date: 2019-09-22 19:52:10
  * @LastEditors: superDragon
- * @LastEditTime: 2019-09-28 19:19:54
+ * @LastEditTime: 2019-10-03 11:07:42
  */
 import packages from '../../packages'
 let Message = packages.Message
@@ -31,7 +31,6 @@ const vCopy = {
       document.body.appendChild(textarea)
       // 选中值并复制
       textarea.select()
-      // textarea.setSelectionRange(0, textarea.value.length);
       const result = document.execCommand('Copy')
       if (result) {
         Message('复制成功')

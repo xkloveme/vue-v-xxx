@@ -1,10 +1,9 @@
 /*
-
- * @describe: 描述
+ * @describe: 入口
  * @Author: superDragon
  * @Date: 2019-09-25 10:27:43
  * @LastEditors: superDragon
- * @LastEditTime: 2019-09-29 23:04:11
+ * @LastEditTime: 2019-10-03 11:54:23
  */
 import packages, { components } from './packages'
 import { directives } from './directives'
@@ -28,4 +27,4 @@ if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue)
 }
 
-export default { install, ...components }
+export default { install, ...directives }

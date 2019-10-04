@@ -5,7 +5,7 @@ title: v-copy
 <div style="width:100%;height:100px;"></div>
 <Block >
 
-<h1 v-copy="v-copy" title="点击复制指令">v-copy</h1>
+<h1 v-copy="`v-copy`" title="点击复制指令">v-copy</h1>
 <h2>使用基本说明</h2>
 
 </Block>

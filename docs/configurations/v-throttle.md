@@ -17,18 +17,51 @@ title: v-throttle
 </br>
 <Example>
 
-```vue
+```html
 <template lang="pug">
 .v-xxx
-  input(v-focus)
+  h1 未加防抖
+  h2 点击次数:{{num}}
+  Button(@click="addNum") (点我)
+  h1 加入防抖
+  h2 点击次数:{{num2}}
+  Button(v-throttle="addNum2") (点我)
 </template>
 <script>
-export default {
-  name: 'v-focus'
-}
+  export default {
+    name: 'v-throttle',
+    data() {
+      return {
+        num: 0,
+        num2: 0
+      }
+    },
+    methods: {
+      addNum() {
+        this.num++
+      },
+      addNum2() {
+        this.num2++
+      }
+    }
+  }
 </script>
 ```
 
 </Example>
 
 </Block>
+
+### 说明
+
+::: info
+`v-throttle` 支持传入节流时间`v-throttle:500` 默认 500ms
+:::
+
+## API
+
+| Name |  Type  | Description |      Required      |
+| :--: | :----: | :---------: | :----------------: |
+| arg  | number |  防抖时间   | :heavy_minus_sign: |
+
+</div>
