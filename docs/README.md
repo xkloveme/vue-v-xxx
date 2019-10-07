@@ -13,6 +13,12 @@ features:
     footer: MIT Licensed | Copyright © 2019-present
 ---
 
+<h1  align="center">
+<Button to="https://github.com/xkloveme/vue-v-xxx">GITHUB</Button>
+<Button to="mailto:xkloveme@gmail.com">EMAIL</Button>
+<Button to="https://www.cnblogs.com/xkloveme">BLOG</Button>
+</h1>
+
 ## 安装
 
 ```bash

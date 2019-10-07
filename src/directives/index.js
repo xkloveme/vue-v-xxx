@@ -3,7 +3,7 @@
  * @Author: superDragon
  * @Date: 2019-09-22 19:49:27
  * @LastEditors: superDragon
- * @LastEditTime: 2019-10-04 10:44:35
+ * @LastEditTime: 2019-10-05 21:36:03
  */
 import copy from './v-copy'
 import focus from './v-focus'
@@ -12,6 +12,7 @@ import throttle from './v-throttle'
 import pin from './v-pin'
 import call from './v-call'
 import ellipsis from './v-ellipsis'
+import money from './v-money'
 // 自定义指令
 export const directives = {
   copy,
@@ -20,5 +21,6 @@ export const directives = {
   throttle,
   pin,
   call,
-  ellipsis
+  ellipsis,
+  money
 }

@@ -19,7 +19,8 @@
   ],
   "author": "xkloveme",
   "license": "ISC",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "node-fetch": "^2.6.0",
     "node-sass": "^4.12.0",
     "pug": "^2.0.4",
@@ -28,9 +29,7 @@
     "vue": "^2.6.10",
     "vue-router": "^3.0.7",
     "vuepress-plugin-container": "^2.0.2",
-    "vuex": "^3.1.1"
-  },
-  "devDependencies": {
+    "vuex": "^3.1.1",
     "@vue/cli-plugin-babel": "^3.9.2",
     "@vue/cli-plugin-eslint": "^3.9.2",
     "@vue/cli-service": "^3.9.3",
