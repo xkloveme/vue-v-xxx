@@ -7,20 +7,23 @@
  */
 
 const vDebounce = {
-  bind (el, { value }) {
-    el.value = value
-  },
   inserted (el, binding, vnode) {
-    let delay = binding.arg || 2000
+    let last = null
     let timer = null
-    el.addEventListener('keyup', () => {
-      if (timer) {
+    let interval = binding.arg || 500
+    el.addEventListener('click', () => {
+      let args = vnode.context[binding.expression]
+      let now = +new Date()
+      if (last && now - last < interval) {
         clearTimeout(timer)
+        timer = setTimeout(() => {
+          last = now
+          args()
+        }, interval)
+      } else {
+        last = now
+        args()
       }
-      timer = setTimeout(() => {
-        timer = null
-        vnode.context[binding.expression] = el.value
-      }, delay)
     })
   }
 }

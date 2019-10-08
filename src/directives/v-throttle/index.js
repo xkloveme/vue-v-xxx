@@ -3,26 +3,23 @@
  * @Author: superDragon
  * @Date: 2019-09-29 22:35:20
  * @LastEditors: superDragon
- * @LastEditTime: 2019-10-03 12:21:11
+ * @LastEditTime: 2019-10-08 10:37:48
  */
 const vThrottle = {
+  bind (el, { value }) {
+    el.value = value
+  },
   inserted (el, binding, vnode) {
-    let last = null
+    let delay = binding.arg || 2000
     let timer = null
-    let interval = binding.arg || 500
-    el.addEventListener('click', () => {
-      let args = vnode.context[binding.expression]
-      let now = +new Date()
-      if (last && now - last < interval) {
+    el.addEventListener('keyup', () => {
+      if (timer) {
         clearTimeout(timer)
-        timer = setTimeout(() => {
-          last = now
-          args()
-        }, interval)
-      } else {
-        last = now
-        args()
       }
+      timer = setTimeout(() => {
+        timer = null
+        vnode.context[binding.expression] = el.value
+      }, delay)
     })
   }
 }

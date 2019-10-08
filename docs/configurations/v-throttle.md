@@ -3,9 +3,10 @@ title: v-throttle
 ---
 
 <div style="width:100%;height:100px;"></div>
-<Block>
+<Block >
+
 <h1 v-copy="`v-throttle`" title="点击复制指令">v-throttle</h1>
-<h1>使用基本说明</h1>
+<h2>使用基本说明</h2>
 
 </Block>
  </br>
@@ -21,28 +22,18 @@ title: v-throttle
 ```html
 <template lang="pug">
 .v-xxx
-  h1 未加防抖
-  h2 点击次数:{{num}}
-  Button(@click="addNum") (点我)
-  h1 加入防抖
-  h2 点击次数:{{num2}}
-  Button(v-throttle="addNum2") (点我)
+  h3 立即触发:{{num}}
+  input(v-model="num")
+  h3 节流后:{{num2}}
+  input(v-throttle:2000="num2")
 </template>
 <script>
   export default {
     name: 'v-throttle',
     data() {
       return {
-        num: 0,
-        num2: 0
-      }
-    },
-    methods: {
-      addNum() {
-        this.num++
-      },
-      addNum2() {
-        this.num2++
+        num: '立即改变',
+        num2: '节流值'
       }
     }
   }
@@ -53,16 +44,18 @@ title: v-throttle
 
 </Block>
 
+<div>
+
 ### 说明
 
 ::: info
-`v-throttle` 支持传入节流时间`v-throttle:500` 默认 500ms
+`v-throttle` 支持传入节流时间`v-throttle:2000` 默认 2s
 :::
 
 ## API
 
 | Name |  Type  | Description |      Required      |
 | :--: | :----: | :---------: | :----------------: |
-| arg  | number |  防抖时间   | :heavy_minus_sign: |
+| arg  | number |  节流时间   | :heavy_minus_sign: |
 
 </div>
