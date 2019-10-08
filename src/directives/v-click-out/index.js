@@ -3,7 +3,7 @@
  * @Author: superDragon
  * @Date: 2019-09-29 22:35:20
  * @LastEditors: superDragon
- * @LastEditTime: 2019-10-08 14:41:09
+ * @LastEditTime: 2019-10-08 19:17:26
  */
 // 定义一个listener存储回调
 const listener = {}
@@ -25,6 +25,7 @@ const vClickOut = {
           binding.value(e, el)
         }
       }
+      document.addEventListener('click', handler)
     }
   },
   // 绑定指令的元素插入DOM时调用
@@ -39,5 +40,5 @@ const vClickOut = {
     document.removeEventListener('click', handler)
   }
 }
-document.addEventListener('click', handler)
+
 export default vClickOut
