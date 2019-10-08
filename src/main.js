@@ -3,7 +3,7 @@
  * @Author: superDragon
  * @Date: 2019-09-25 10:27:43
  * @LastEditors: superDragon
- * @LastEditTime: 2019-10-08 10:51:59
+ * @LastEditTime: 2019-10-08 13:50:53
  */
 import packages, { components } from './packages'
 import { directives } from './directives'
@@ -17,7 +17,6 @@ const install = function (Vue, opts = {}) {
   })
 
   Object.keys(directives).forEach((key) => {
-    console.log('🐛🐛🐛: install -> key', key)
     Vue.directive(key, directives[key])
   })
 

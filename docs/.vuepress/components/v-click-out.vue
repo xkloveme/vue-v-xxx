@@ -11,11 +11,11 @@ export default {
     }
   },
   methods: {
-    handleClick () {
+    handleClick (e) {
       this.name = '您点击了内部'
     },
-    handleClickOut () {
-      this.name = '您点击了外部'
+    handleClickOut (e, el) {
+      el && (this.name = '您点击了外部')
     }
   }
 }

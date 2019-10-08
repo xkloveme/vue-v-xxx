@@ -3,7 +3,7 @@
  * @Author: superDragon
  * @Date: 2019-09-25 10:30:34
  * @LastEditors: superDragon
- * @LastEditTime: 2019-09-29 22:19:07
+ * @LastEditTime: 2019-10-08 18:23:35
  */
 const baseMap = {
   dev: '/',
@@ -60,6 +60,14 @@ module.exports = {
     md.use(require('markdown-it-checkbox')).use(require('markdown-it-kbd'))
   },
   plugins: [
+    plugins: [
+      [
+        '@vuepress/google-analytics',
+        {
+          'ga': 'UA-102352377-1' // UA-102352377-1
+        }
+      ]
+    ],
     [
       'vuepress-plugin-container',
       {
