@@ -1,5 +1,5 @@
 <template lang="pug">
-.v-xxx.container
+.v-xxx.v-drag
   div.div1(v-drag)
 </template>
 <script>
@@ -7,8 +7,8 @@ export default {
   name: 'v-drag'
 }
 </script>
-<style>
-.container {
+<style scoped>
+.v-drag {
   width: 100%;
   height: 500px;
   position: relative;
