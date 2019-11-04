@@ -1,9 +1,9 @@
 <!--
- * @describe: 描述
+ * @describe: 提示
  * @Author: superDragon
  * @Date: 2019-09-26 11:21:01
  * @LastEditors: superDragon
- * @LastEditTime: 2019-09-26 11:21:27
+ * @LastEditTime: 2019-11-04 17:33:05
  -->
 <template>
   <div :class="messageClasses" ref="message" v-if="visible">
@@ -32,7 +32,7 @@ export default {
     messageClasses () {
       const { enter, leave } = this.animation
       return {
-        message: true,
+        'message-notification': true,
         'move-up-enter': enter,
         'move-up-enter-active': enter,
         'move-up-leave': leave,
@@ -81,7 +81,7 @@ export default {
   font-size 14px
   line-height 1.5
   pointer-events none
-.message
+.message-notification
   padding 8px
   margin-top -8px
   text-align center

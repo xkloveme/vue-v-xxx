@@ -3,7 +3,7 @@
  * @Author: superDragon
  * @Date: 2019-09-22 19:49:27
  * @LastEditors: superDragon
- * @LastEditTime: 2019-10-08 10:54:09
+ * @LastEditTime: 2019-11-04 17:41:56
  */
 import copy from './v-copy'
 import focus from './v-focus'
@@ -14,6 +14,7 @@ import call from './v-call'
 import ellipsis from './v-ellipsis'
 import money from './v-money'
 import clickOut from './v-click-out'
+import drag from './v-drag'
 // 自定义指令
 export const directives = {
   copy,
@@ -24,5 +25,6 @@ export const directives = {
   call,
   ellipsis,
   money,
-  'click-out': clickOut
+  'click-out': clickOut,
+  drag
 }
