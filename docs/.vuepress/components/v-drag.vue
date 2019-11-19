@@ -1,10 +1,22 @@
 <template lang="pug">
 .v-xxx.v-drag
-  div.div1(v-drag)
+  .data {{item}}
+  div.div1(v-drag="item")
 </template>
 <script>
 export default {
-  name: 'v-drag'
+  name: 'v-drag',
+  data () {
+    return {
+      item: {
+        width: 50,
+        height: 50,
+        top: 58,
+        left: 150,
+        data: {}
+      }
+    }
+  }
 }
 </script>
 <style scoped>
@@ -19,7 +31,7 @@ export default {
   height: 50px;
   width: 50px;
   border: 1px solid red;
-  right: 0;
-  bottom: 0;
+  /* right: 0;
+  bottom: 0; */
 }
 </style>

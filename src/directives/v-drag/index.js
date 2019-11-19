@@ -3,17 +3,19 @@
  * @Author: superDragon
  * @Date: 2019-09-29 22:35:20
  * @LastEditors: superDragon
- * @LastEditTime: 2019-11-04 18:32:15
+ * @LastEditTime: 2019-11-19 13:30:09
  */
 const vDrag = {
   bind: (el, binding, node) => {
     // 绑定默认样式
     el.style.zIndex = 9
     el.style.position = 'absolute'
+    el.style.top = binding.value.top + 'px'
+    el.style.left = binding.value.left + 'px'
     // 如果为编辑状态
     if (binding.value || binding.value === undefined) {
       // 定义该元素的 top left width height
-      let x, y, w, h
+      let x; let y; let w; let h
       // 鼠标的起始和结束坐标
       let cxstart = null
       let cystart = null
@@ -91,7 +93,11 @@ const vDrag = {
               limit = 0
               break
           }
-          handlediv(direct, pos, move, limit)
+          let position = {
+            left: node.elm.parentNode.clientWidth - binding.value.width,
+            top: node.elm.parentNode.clientHeight - binding.value.height
+          }
+          handlediv(direct, pos, move, limit, position)
         }
         // 取消移动事件
         document.onmouseup = e => {
@@ -107,10 +113,15 @@ const vDrag = {
          * @param move 拖动距离
          * @param limit 限定范围
          */
-        function handlediv (direct, pos, move, limit) {
+        function handlediv (direct, pos, move, limit, position) {
           for (let i = 0; i < direct.length; i++) {
             let val = parseInt(pos[i]) + move[i]
-            val = val <= limit ? limit : val
+            if (val <= limit) {
+              val = limit
+            } else if (val >= position[direct[i]]) {
+              val = position[direct[i]]
+            }
+            binding.value && (binding.value[direct[i]] = val)
             el.style[direct[i]] = val + 'px'
           }
         }
