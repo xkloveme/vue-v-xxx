@@ -6,25 +6,25 @@
 </template>
 <script>
 export default {
-  name: 'v-drag',
-  data () {
+  name: "v-drag",
+  data() {
     return {
       item: {
-        disabled: false,
+        disabled: true,
         width: 50,
         height: 50,
         top: 58,
         left: 150,
         data: {}
       }
-    }
+    };
   },
   methods: {
-    open () {
-      this.item.disabled = !this.item.disabled
+    open() {
+      this.item.disabled = !this.item.disabled;
     }
   }
-}
+};
 </script>
 <style scoped>
 .v-drag {

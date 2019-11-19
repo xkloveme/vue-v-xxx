@@ -3,7 +3,7 @@
  * @Author: superDragon
  * @Date: 2019-09-29 22:35:20
  * @LastEditors: superDragon
- * @LastEditTime: 2019-11-19 17:51:11
+ * @LastEditTime: 2019-11-19 18:42:56
  */
 const vDrag = {
   bind: (el, binding, node) => {
@@ -12,8 +12,10 @@ const vDrag = {
     el.style.position = 'absolute'
     el.style.top = binding.value.top + 'px'
     el.style.left = binding.value.left + 'px'
+  },
+  update: (el, binding, node) => {
     // 如果为编辑状态
-    if (binding.value || binding.value === undefined) {
+    if ((binding.value || binding.value === undefined) && !binding.value.disabled) {
       // 定义该元素的 top left width height
       let x; let y; let w; let h
       // 鼠标的起始和结束坐标
@@ -127,14 +129,6 @@ const vDrag = {
         }
       }
     } else {
-      el.style.cursor = 'default'
-      // 移除点击事件
-      el.onmousedown = null
-      el.onmousemove = null
-    }
-  },
-  update: (el, binding, node) => {
-    if (binding.value.disabled) {
       el.style.cursor = 'default'
       // 移除点击事件
       el.onmousedown = null
