@@ -1,7 +1,8 @@
 <template lang="pug">
 .v-xxx.v-drag
-  .data {{item}}
-  div.div1(v-drag="item")
+    .data {{item}}
+    button.button(@click="open()") {{item.disabled?'关闭':'打开'}}
+    div.div1(v-drag="item")
 </template>
 <script>
 export default {
@@ -9,12 +10,18 @@ export default {
   data () {
     return {
       item: {
+        disabled: false,
         width: 50,
         height: 50,
         top: 58,
         left: 150,
         data: {}
       }
+    }
+  },
+  methods: {
+    open () {
+      this.item.disabled = !this.item.disabled
     }
   }
 }

@@ -3,7 +3,7 @@
  * @Author: superDragon
  * @Date: 2019-09-29 22:35:20
  * @LastEditors: superDragon
- * @LastEditTime: 2019-11-19 13:30:09
+ * @LastEditTime: 2019-11-19 17:51:11
  */
 const vDrag = {
   bind: (el, binding, node) => {
@@ -127,6 +127,14 @@ const vDrag = {
         }
       }
     } else {
+      el.style.cursor = 'default'
+      // 移除点击事件
+      el.onmousedown = null
+      el.onmousemove = null
+    }
+  },
+  update: (el, binding, node) => {
+    if (binding.value.disabled) {
       el.style.cursor = 'default'
       // 移除点击事件
       el.onmousedown = null
