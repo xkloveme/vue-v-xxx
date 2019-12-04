@@ -3,6 +3,9 @@
   "version": "0.0.17",
   "description": "vue v-xxx extend custom directives",
   "main": "lib/vue-v-xxx.common.js",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "scripts": {
     "dev": "npm run docs:dev",
     "build": "npm run docs:build",
