@@ -1,6 +1,6 @@
 {
   "name": "vue-v-xxx",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "description": "vue v-xxx extend custom directives",
   "main": "lib/vue-v-xxx.common.js",
   "publishConfig": {
